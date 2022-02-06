@@ -83,8 +83,8 @@ pos = (SCREEN_SIZE - Csize) // 2
     
         
 if (ZOOM_GLO):
-        cv.imshow("Window", np.zeros((Osize[1], Osize[0], 3)))
-        cv.createTrackbar("Zoom ", "Window", 0, 40, func)
+        cv.imshow("CenterStage", np.zeros((Osize[1], Osize[0], 3)))
+        cv.createTrackbar("Zoom ", "CenterStage", 0, 50, func)
 
         while(True):
             ret, img = cap.read()
@@ -130,7 +130,7 @@ if (ZOOM_GLO):
             
             
             img=cv.flip(img,1)
-            cv.imshow("Window", img)
+            cv.imshow("CenterStage", img)
 
             
             img = cv.cvtColor(img, cv.COLOR_BGR2RGB)
